@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Pseudonymisierung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Desktop Pseudonymisierung</h1>
+        <p>Sichere Daten-Pseudonymisierung</p>
+        
+        <div class="form-section">
+            <h2>Daten Pseudonymisieren</h2>
+            <form id="pseudonymizeForm">
+                <div class="form-group">
+                    <label for="dataInput">Zu pseudonymisierende Daten:</label>
+                    <input type="text" id="dataInput" placeholder="z.B. example@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="typeInput">Datentyp:</label>
+                    <select id="typeInput" required>
+                        <option value="email">E-Mail</option>
+                        <option value="name">Name</option>
+                        <option value="ssn">Sozialversicherungsnummer</option>
+                        <option value="other">Sonstige</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Pseudonymisieren</button>
+            </form>
+            <div id="pseudonymResult" class="result"></div>
+        </div>
+        
+        <div class="form-section">
+            <h2>Pseudonymisierung Rückgängig Machen</h2>
+            <form id="depseudonymizeForm">
+                <div class="form-group">
+                    <label for="pseudonymInput">Pseudonymisierte Daten:</label>
+                    <input type="text" id="pseudonymInput" placeholder="z.B. a1b2c3d4e5f6g7h8" required>
+                </div>
+                <button type="submit" class="btn">Zurückkonvertieren</button>
+            </form>
+            <div id="depseudonymResult" class="result"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
